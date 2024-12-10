@@ -1,0 +1,140 @@
+/* Pamatstils visam ķermenim */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #74b9ff, #a29bfe); /* Mīksts gradienta fons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Kalkulatora stils */
+.calculator {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 350px;
+    text-align: center;
+}
+
+/* Ievades lauks */
+.display input {
+    width: 100%;
+    height: 50px;
+    font-size: 30px;
+    text-align: right;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #3498db;
+    background-color: #f7f7f7;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Pogu stils */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+button {
+    padding: 20px;
+    font-size: 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Pogu efekti */
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px); /* Mazs pacēlums uzklikšķinot */
+}
+
+button:active {
+    background-color: #2980b9;
+    transform: translateY(0); /* Pogu "nosist" uz klikšķa */
+}
+
+/* Poga "AC" un "=" - īpaša */
+button#clear {
+    background-color: #e74c3c;
+}
+
+button#clear:hover {
+    background-color: #c0392b;
+}
+
+button#equal {
+    background-color: #2ecc71;
+}
+
+button#equal:hover {
+    background-color: #27ae60;
+}
+
+/* Vēstures sadaļa */
+.history {
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.history h3 {
+    font-size: 20px;
+    color: #34495e;
+}
+
+.history ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.history li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ecf0f1;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+}
+
+.history button {
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.2s ease;
+}
+
+.history button:hover {
+    background-color: #c0392b;
+}
+
+/* Atbalsta responsīvo dizainu */
+@media (max-width: 400px) {
+    .calculator {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .display input {
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+}
